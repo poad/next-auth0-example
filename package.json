@@ -11,7 +11,7 @@
     "all": "yarn lint --fix && yarn build"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^1.6.1",
+    "@auth0/nextjs-auth0": "^1.6.2",
     "@emotion/cache": "^11.7.1",
     "@emotion/react": "^11.7.1",
     "@emotion/server": "^11.4.0",
