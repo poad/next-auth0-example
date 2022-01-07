@@ -7,18 +7,7 @@ on:
 
   workflow_dispatch:
 
-permissions:
-  actions: read
-  checks: write
-  contents: none
-  deployments: none
-  id-token: write
-  issues: none
-  packages: none
-  pull-requests: write
-  repository-projects: none
-  security-events: write
-  statuses: write
+permissions: write-all
 
 jobs:
   yarn-base-test:
