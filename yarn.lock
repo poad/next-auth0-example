@@ -1194,10 +1194,10 @@
   resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-9.14.5.tgz#f1f51677e8495a56a8052bd094db1efd08361a48"
   integrity sha512-ZIHdtQ6Fkn7C+qAECtiP/+igb/vd0b+lOw018c+xEW2QDQFLSnDjtQAPLkdZopOsVdiXdC4JMS5w8ZHQfRGHtw==
 
-"@types/auth0@^2.34.9":
-  version "2.34.9"
-  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.34.9.tgz#630b21f9b7f9ee5cbdafc5d37952c752ea2930a4"
-  integrity sha512-+uU6xrNORCUK2P7TLT6R+dg3bmzIe75/Eg+xY6JPgkPNnaTvumEaQkwZbOvKtNA2f/XKF2KiCckAx9p5mn9SAA==
+"@types/auth0@^2.34.10":
+  version "2.34.10"
+  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.34.10.tgz#6ad475650f4723986ca11a02f4590a10e8245753"
+  integrity sha512-MgNPL7hEwWTPPmq9zin10kTTpdGvZLgpz7sBVK3YPyqasDGtuqJs6MiLkroKWhQq4W6lVFUQ52Wuo5QUomuOxA==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.1.18"
@@ -2545,9 +2545,9 @@ duplexer2@^0.1.2:
     readable-stream "^2.0.2"
 
 electron-to-chromium@^1.3.723, electron-to-chromium@^1.4.17:
-  version "1.4.37"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.37.tgz#eedd53cad229ae2d1632b958a92a3d7d7b27f553"
-  integrity sha512-XIvFB1omSAxYgHYX48sC+HR8i/p7lx7R+0cX9faElg1g++h9IilCrJ12+bQuY+d96Wp7zkBiJwMOv+AhLtLrTg==
+  version "1.4.38"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.38.tgz#10ea58d73d36b13e78d5024f3b74a352d3958d01"
+  integrity sha512-WhHt3sZazKj0KK/UpgsbGQnUUoFeAHVishzHFExMxagpZgjiGYSC9S0ZlbhCfSH2L2i+2A1yyqOIliTctMx7KQ==
 
 elliptic@^6.5.3:
   version "6.5.4"
