@@ -1194,10 +1194,10 @@
   resolved "https://registry.yarnpkg.com/@types/auth0-js/-/auth0-js-9.14.5.tgz#f1f51677e8495a56a8052bd094db1efd08361a48"
   integrity sha512-ZIHdtQ6Fkn7C+qAECtiP/+igb/vd0b+lOw018c+xEW2QDQFLSnDjtQAPLkdZopOsVdiXdC4JMS5w8ZHQfRGHtw==
 
-"@types/auth0@^2.34.9":
-  version "2.34.9"
-  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.34.9.tgz#630b21f9b7f9ee5cbdafc5d37952c752ea2930a4"
-  integrity sha512-+uU6xrNORCUK2P7TLT6R+dg3bmzIe75/Eg+xY6JPgkPNnaTvumEaQkwZbOvKtNA2f/XKF2KiCckAx9p5mn9SAA==
+"@types/auth0@^2.34.10":
+  version "2.34.10"
+  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.34.10.tgz#6ad475650f4723986ca11a02f4590a10e8245753"
+  integrity sha512-MgNPL7hEwWTPPmq9zin10kTTpdGvZLgpz7sBVK3YPyqasDGtuqJs6MiLkroKWhQq4W6lVFUQ52Wuo5QUomuOxA==
 
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.14":
   version "7.1.18"
