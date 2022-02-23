@@ -4,15 +4,15 @@ on:
   pull_request_target:
 
 permissions:
-  actions: read
+  actions: write
   checks: write
-  contents: none
+  contents: write
   deployments: none
   id-token: write
-  issues: none
+  issues: write
   packages: none
   pull-requests: write
-  repository-projects: none
+  repository-projects: write
   security-events: write
   statuses: write
 
