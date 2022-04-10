@@ -3,7 +3,7 @@ import type { AppProps } from 'next/app';
 
 import Head from 'next/head';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import { AuthProvider } from 'use-auth0';
+import { Auth0Provider } from '@auth0/auth0-react';
 import router from 'next/dist/client/router';
 import { useEffect } from 'react';
 import theme from '../styles/theme';
@@ -32,7 +32,7 @@ const auth0Param: Auth0Param = {
   redirectUri: process.env.NEXT_PUBLIC_CALLBACK_URL as string,
 };
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component }: AppProps): JSX.Element => {
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
@@ -43,11 +43,11 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   return (
     <ThemeProvider theme={theme}>
-      <AuthProvider
+      <Auth0Provider
         navigate={(route: string) => router.push(route)}
-        auth0_domain={auth0Config.domain}
-        auth0_client_id={auth0Config.clientId}
-        auth0_params={auth0Param}
+        domain={auth0Config.domain}
+        clientId={auth0Config.clientId}
+        params={auth0Param}
       >
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <Head>
@@ -58,8 +58,8 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
             tree thanks to React context. */}
 
         <CssBaseline />
-        <Component {...pageProps} />
-      </AuthProvider>
+        <Component />
+      </Auth0Provider>
     </ThemeProvider>
   );
 };

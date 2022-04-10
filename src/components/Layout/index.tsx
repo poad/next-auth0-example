@@ -1,11 +1,11 @@
-import React, { PropsWithChildren, useEffect, useState } from 'react';
+import React, { PropsWithChildren, useState } from 'react';
 import {
   AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography,
 } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { useAuth } from 'use-auth0';
+import { useAuth0 } from '@auth0/auth0-react';
 
 const drawerWidth = 240;
 
@@ -19,20 +19,14 @@ interface LayoutProps {
 
 const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
   const { container } = props;
-  const [drawerOpen, setDrawerOpen] = useState(false);
   const {
-    isAuthenticated, login, logout, handleAuthentication,
-  } = useAuth();
+    isAuthenticated, isLoading, loginWithRedirect, logout,
+  } = useAuth0();
+  const [drawerOpen, setDrawerOpen] = useState(isLoading);
 
   function handleDrawerToggle() {
     setDrawerOpen(!drawerOpen);
   }
-
-  /* eslint-disable react-hooks/exhaustive-deps */
-  useEffect(() => {
-    handleAuthentication();
-  }, []);
-  /* eslint-enable react-hooks/exhaustive-deps */
 
   return (
     <Box sx={{ display: 'flex', color: '#fff' }}>
@@ -66,9 +60,9 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
             </ListItem>
           ))}
           {['Auth'].map(() => {
-            if (isAuthenticated()) {
+            if (isAuthenticated) {
               return (
-                <ListItem button key="logout" onClick={logout} sx={{ color: '#fff' }}>
+                <ListItem button key="logout" onClick={() => logout()} sx={{ color: '#fff' }}>
                   <ListItemIcon sx={{ color: '#fff' }}>
                     <ExitToAppIcon />
                   </ListItemIcon>
@@ -77,7 +71,7 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
               );
             }
             return (
-              <ListItem button key="logoin" onClick={login} sx={{ color: '#fff' }}>
+              <ListItem button key="logoin" onClick={loginWithRedirect} sx={{ color: '#fff' }}>
                 <ListItemIcon sx={{ color: '#fff' }}>
                   <ExitToAppIcon />
                 </ListItemIcon>
