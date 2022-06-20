@@ -2,6 +2,7 @@
   "name": "next-next-auth0-example",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next",
     "build": "next build",
