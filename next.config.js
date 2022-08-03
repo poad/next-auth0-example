@@ -1,23 +1,14 @@
 /** @type {import('next').NextConfig} */
-import withPlugins from 'next-compose-plugins';
 import withBundleAnalyzer from '@next/bundle-analyzer';
-const analyzer = withBundleAnalyzer({
-    enabled: process.env.ANALYZE === 'true',
-});
 
-const config = withPlugins([
-    [analyzer],
-],
-    {
-        webpack5: true,
-        reactStrictMode: true,
+const config = withBundleAnalyzer({
+    enabled: process.env.ANALYZE === 'true',
+})({
+    reactStrictMode: true,
+    swcMinify: true,
+    experimental: {
         esmExternals: true,
-        swcLoader: true,
-        swcMinify: true,
-        experimental: {
-            modern: true,
-        }
     }
-);
+});
 
 export default config;

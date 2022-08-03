@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
     "lint": "eslint --ext .ts,.js,.tsx,.jsx src",
@@ -19,7 +20,6 @@
     "@emotion/styled": "*",
     "@mui/icons-material": "*",
     "@mui/material": "*",
-    "@mui/styles": "*",
     "cross-fetch": "*",
     "next": "*",
     "next-compose-plugins": "*",
