@@ -25,7 +25,7 @@ const Home = (): JSX.Element => (
       </div>
     </div>
 
-    <style jsx>{`
+    <style>{`
       .hero {
         width: 100%;
         color: #333;
