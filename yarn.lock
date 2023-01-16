@@ -684,9 +684,9 @@
   integrity sha512-Lfoj9XItsnjI/1lxHs4r5wlQjkD4XLy81tAVt6B3j3N9mJL4o4ZQu1SbNcq7aImdhkzss53vxubwBJ3rp3AjUQ==
 
 "@types/auth0@*":
-  version "2.35.8"
-  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.35.8.tgz#c1f084e5976c3856224f0098295f6f5580e443ec"
-  integrity sha512-T0v1/8UxowzbRH7hXWzGh7vGq8AvPAJVR+iSpXOsILzxf+4/28aLNIxhu3fPTzikLEEkrWDdyCQTeBcEWUjzgQ==
+  version "2.35.9"
+  resolved "https://registry.yarnpkg.com/@types/auth0/-/auth0-2.35.9.tgz#f43570c97769cb4fb0883e780939615958a0c99e"
+  integrity sha512-44j1NMmIFpULn4fNByaPobo0Bj5GPepm5/YsvXiMRrkpq1i9sXQsN8SxA4rqZAX5V34x8vlYDW0WhLrA7cJPaw==
 
 "@types/hoist-non-react-statics@*":
   version "3.3.1"
