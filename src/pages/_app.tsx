@@ -4,7 +4,6 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Auth0Provider } from '@auth0/auth0-react';
-import router from 'next/dist/client/router';
 import { useEffect } from 'react';
 import theme from '../styles/theme';
 
@@ -36,7 +35,7 @@ const App = ({ Component }: AppProps): JSX.Element => {
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
-    if (jssStyles && jssStyles.parentNode) {
+    if (jssStyles?.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
   }, []);
@@ -44,10 +43,9 @@ const App = ({ Component }: AppProps): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <Auth0Provider
-        navigate={(route: string) => router.push(route)}
         domain={auth0Config.domain}
         clientId={auth0Config.clientId}
-        params={auth0Param}
+        authorizationParams={auth0Param}
       >
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <Head>

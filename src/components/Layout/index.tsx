@@ -45,7 +45,7 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap></Typography>
+          <Typography variant="h6" noWrap />
         </Toolbar>
       </AppBar>
       <Drawer container={container} variant="permanent" open>
@@ -71,7 +71,7 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
               );
             }
             return (
-              <ListItem button key="logoin" onClick={loginWithRedirect} sx={{ color: '#fff' }}>
+              <ListItem button key="logoin" onClick={() => loginWithRedirect} sx={{ color: '#fff' }}>
                 <ListItemIcon sx={{ color: '#fff' }}>
                   <ExitToAppIcon />
                 </ListItemIcon>
