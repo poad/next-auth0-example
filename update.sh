@@ -5,6 +5,21 @@ CUR=$(pwd)
 CURRENT=$(cd $(dirname $0);pwd)
 echo "${CURRENT}"
 
+cd "${CURRENT}/infra"
+git pull --prune
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
+pwd
+pnpm install && pnpm up && pnpm build
+result=$?
+if [ $result -ne 0 ]; then
+  cd "${CUR}"
+  exit $result
+fi
+
 cd "${CURRENT}"
 git pull --prune
 result=$?
@@ -13,7 +28,7 @@ if [ $result -ne 0 ]; then
   exit $result
 fi
 pwd
-yarn install && yarn upgrade && yarn build
+pnpm install && pnpm up && pnpm build
 result=$?
 if [ $result -ne 0 ]; then
   cd "${CUR}"

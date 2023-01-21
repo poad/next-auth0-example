@@ -1,6 +1,17 @@
 import React, { PropsWithChildren, useState } from 'react';
 import {
-  AppBar, Box, CssBaseline, Divider, Drawer, IconButton, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography,
+  AppBar,
+  Box,
+  CssBaseline,
+  Divider,
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Toolbar,
+  Typography,
 } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -19,9 +30,7 @@ interface LayoutProps {
 
 const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
   const { container } = props;
-  const {
-    isAuthenticated, isLoading, loginWithRedirect, logout,
-  } = useAuth0();
+  const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
   const [drawerOpen, setDrawerOpen] = useState(isLoading);
 
   function handleDrawerToggle() {
@@ -62,7 +71,12 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
           {['Auth'].map(() => {
             if (isAuthenticated) {
               return (
-                <ListItem button key="logout" onClick={() => logout()} sx={{ color: '#fff' }}>
+                <ListItem
+                  button
+                  key="logout"
+                  onClick={() => logout()}
+                  sx={{ color: '#fff' }}
+                >
                   <ListItemIcon sx={{ color: '#fff' }}>
                     <ExitToAppIcon />
                   </ListItemIcon>
@@ -71,7 +85,12 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
               );
             }
             return (
-              <ListItem button key="logoin" onClick={() => loginWithRedirect} sx={{ color: '#fff' }}>
+              <ListItem
+                button
+                key="logoin"
+                onClick={() => loginWithRedirect}
+                sx={{ color: '#fff' }}
+              >
                 <ListItemIcon sx={{ color: '#fff' }}>
                   <ExitToAppIcon />
                 </ListItemIcon>

@@ -1,5 +1,5 @@
 name: Build and Test
- 
+
 on:
   push:
     branches:
@@ -10,10 +10,10 @@ on:
 permissions: write-all
 
 jobs:
-  yarn-base-test:
+  pnpm-base-test:
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [16.x, 18.x]
 
     runs-on: ubuntu-latest
     steps:
@@ -24,9 +24,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           check-latest: true
 
-      - name: yarn install
+      - name: Install pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
+
+      - name: build
         env:
           NEXT_PUBLIC_AUTH0_DOMAIN: test
           NEXT_PUBLIC_AUTH0_CLIENT_ID: test
           NEXT_PUBLIC_CALLBACK_URL: http://localhost:3000
-        run: yarn install && yarn lint --fix && yarn build
+        run: pnpm install && pnpm lint-fix && pnpm build
