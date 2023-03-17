@@ -24,15 +24,15 @@
     "all": "yarn lint && yarn build && yarn test && yarn export"
   },
   "dependencies": {
-    "@auth0/auth0-react": "^2.0.0",
+    "@auth0/auth0-react": "^2.0.1",
     "@emotion/cache": "^11.10.5",
-    "@emotion/react": "^11.10.5",
+    "@emotion/react": "^11.10.6",
     "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.11.0",
-    "@mui/material": "^5.11.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.13",
     "cross-fetch": "^3.1.5",
-    "next": "^13.1.5",
+    "next": "^13.2.4",
     "next-compose-plugins": "^2.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -40,18 +40,18 @@
     "use-auth0": "^0.5.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.1.5",
+    "@next/bundle-analyzer": "^13.2.4",
     "@rebass/preset-material": "^4.0.5",
-    "@types/auth0": "^2.35.9",
-    "@types/node": "^18.11.18",
-    "@types/react": "^18.0.27",
+    "@types/auth0": "^2.35.11",
+    "@types/node": "^18.15.3",
+    "@types/react": "^18.0.28",
     "@types/rebass": "^4.0.10",
     "next-compose-plugins": "*",
-    "prettier": "^2.8.3",
+    "prettier": "^2.8.4",
     "rebass": "^4.0.7",
     "rome": "^11.0.0",
     "swc-loader": "^0.2.3",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "resolutions": {
     "json5": ">=2.2.3"
