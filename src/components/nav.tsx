@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 import Link from 'next/link';
 
 const links = [
@@ -9,22 +9,23 @@ const links = [
   key: `nav-link-${link.href}-${link.label}`,
 }));
 
-const Nav = (): JSX.Element => (
-  <nav>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
+export default function Nav(): JSX.Element {
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
         </li>
-      ))}
-    </ul>
+        {links.map(({ key, href, label }) => (
+          <li key={key}>
+            <a href={href}>{label}</a>
+          </li>
+        ))}
+      </ul>
 
-    <style>{`
+      <style>{`
       :global(body) {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
@@ -49,7 +50,6 @@ const Nav = (): JSX.Element => (
         font-size: 13px;
       }
     `}</style>
-  </nav>
-);
-
-export default Nav;
+    </nav>
+  );
+}

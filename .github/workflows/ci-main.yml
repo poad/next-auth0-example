@@ -13,7 +13,7 @@ jobs:
   pnpm-base-test:
     strategy:
       matrix:
-        node-version: [16.x, 18.x]
+        node-version: [18.x]
 
     runs-on: ubuntu-latest
     steps:

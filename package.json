@@ -6,13 +6,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "export": "next export",
+    "export": "next build",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
     "format-check": "rome format src",
     "format": "rome format --write src",
     "check": "rome check src",
-    "check-fix": "rome check --apply src",
+    "check-fix": "rome check --apply-unsafe src",
     "lint": "yarn format-check && yarn check",
     "lint-fix": "yarn format && yarn check-fix",
     "clean": "rimraf build",
@@ -21,39 +21,33 @@
     "prebuild": "yarn install",
     "predev": "yarn install",
     "preanalyze": "yarn install",
-    "all": "yarn lint && yarn build && yarn test && yarn export"
+    "all": "yarn lint && yarn build && yarn test"
   },
   "dependencies": {
-    "@auth0/auth0-react": "^2.0.1",
-    "@emotion/cache": "^11.10.7",
-    "@emotion/react": "^11.10.6",
-    "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.6",
+    "@auth0/auth0-react": "^2.1.0",
+    "@emotion/cache": "^11.11.0",
+    "@emotion/react": "^11.11.0",
+    "@emotion/server": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.2",
+    "@mui/material": "^5.12.3",
     "cross-fetch": "^3.1.5",
-    "next": "^13.3.1",
-    "next-compose-plugins": "^2.2.1",
+    "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-use-auth": "2.1.0-14",
     "use-auth0": "^0.5.1"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^13.3.1",
+    "@next/bundle-analyzer": "^13.4.1",
     "@rebass/preset-material": "^4.0.5",
-    "@types/auth0": "^3.3.1",
-    "@types/node": "^18.16.1",
-    "@types/react": "^18.2.0",
+    "@types/auth0": "^3.3.2",
+    "@types/node": "^20.1.1",
+    "@types/react": "^18.2.6",
     "@types/rebass": "^4.0.10",
-    "next-compose-plugins": "*",
-    "prettier": "^2.8.8",
     "rebass": "^4.0.7",
     "rome": "^12.0.0",
     "swc-loader": "^0.2.3",
     "typescript": "^5.0.4"
-  },
-  "resolutions": {
-    "json5": ">=2.2.3"
   }
 }
