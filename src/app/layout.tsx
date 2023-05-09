@@ -1,4 +1,9 @@
-import React, { PropsWithChildren, useState } from 'react';
+'use client';
+import Head from 'next/head';
+import { Auth0Provider } from '@auth0/auth0-react';
+import theme from './styles/theme';
+
+import { ReactNode, useState, useEffect } from 'react';
 import {
   AppBar,
   Box,
@@ -9,7 +14,7 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText,
+  ListItemText, ThemeProvider,
   Toolbar,
   Typography,
 } from '@mui/material';
@@ -20,16 +25,10 @@ import { useAuth0 } from '@auth0/auth0-react';
 
 const drawerWidth = 240;
 
-interface LayoutProps {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  container?: Element;
-}
-
-const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
-  const { container } = props;
+function Base(props: {
+  children: ReactNode;
+}): JSX.Element {
+  const { children } = props;
   const { isAuthenticated, isLoading, loginWithRedirect, logout } = useAuth0();
   const [drawerOpen, setDrawerOpen] = useState(isLoading);
 
@@ -57,7 +56,7 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
           <Typography variant="h6" noWrap />
         </Toolbar>
       </AppBar>
-      <Drawer container={container} variant="permanent" open>
+      <Drawer variant="permanent" open>
         <Divider />
         <List>
           {['Info'].map((text) => (
@@ -102,10 +101,67 @@ const Layout = (props: PropsWithChildren<LayoutProps>): JSX.Element => {
       </Drawer>
       <Box style={{ flexGrow: 1 }}>
         <Box />
-        {props.children}
+        {children}
       </Box>
     </Box>
   );
 };
 
-export default Layout;
+interface Auth0Config {
+  domain: string;
+  clientId: string;
+  callbackUrl: string;
+}
+
+interface Auth0Param {
+  domain: string;
+  clientId: string;
+  redirectUri: string;
+}
+
+const auth0Config: Auth0Config = {
+  domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN as string,
+  clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID as string,
+  callbackUrl: process.env.NEXT_PUBLIC_CALLBACK_URL as string,
+};
+
+const auth0Param: Auth0Param = {
+  domain: process.env.NEXT_PUBLIC_AUTH0_DOMAIN as string,
+  clientId: process.env.NEXT_PUBLIC_AUTH0_CLIENT_ID as string,
+  redirectUri: process.env.NEXT_PUBLIC_CALLBACK_URL as string,
+};
+
+export default function Layout({ children }: { children: ReactNode }): JSX.Element {
+  useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles?.parentNode) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }, []);
+
+  return (
+    <html lang="en">
+      <body>
+        <ThemeProvider theme={theme}>
+          <Auth0Provider
+            domain={auth0Config.domain}
+            clientId={auth0Config.clientId}
+            authorizationParams={auth0Param}
+          >
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <Head>
+              <title>Home</title>
+              <link rel="icon" href="/favicon.ico" />
+            </Head>
+            {/* ThemeProvider makes the theme available down the React
+            tree thanks to React context. */}
+
+            <CssBaseline />
+            <Base>{children}</Base>
+          </Auth0Provider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+};
