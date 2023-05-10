@@ -15,6 +15,7 @@ export default function Nav(): JSX.Element {
       <ul>
         <li>
           <Link href="/">
+            {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
             <a>Home</a>
           </Link>
         </li>
