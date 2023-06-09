@@ -41,7 +41,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^13.4.1",
     "@rebass/preset-material": "^4.0.5",
-    "@types/auth0": "^3.3.2",
+    "@types/auth0": "^3.3.3",
     "@types/node": "^20.1.1",
     "@types/react": "^18.2.6",
     "@types/rebass": "^4.0.10",
