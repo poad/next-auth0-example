@@ -22,6 +22,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import MenuIcon from '@mui/icons-material/Menu';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { useAuth0 } from '@auth0/auth0-react';
+import StyledJsxRegistry from './registry';
 
 const drawerWidth = 240;
 
@@ -143,24 +144,26 @@ export default function Layout({ children }: { children: ReactNode }): JSX.Eleme
   return (
     <html lang="en">
       <body>
-        <ThemeProvider theme={theme}>
-          <Auth0Provider
-            domain={auth0Config.domain}
-            clientId={auth0Config.clientId}
-            authorizationParams={auth0Param}
-          >
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            <Head>
-              <title>Home</title>
-              <link rel="icon" href="/favicon.ico" />
-            </Head>
-            {/* ThemeProvider makes the theme available down the React
+        <StyledJsxRegistry>
+          <ThemeProvider theme={theme}>
+            <Auth0Provider
+              domain={auth0Config.domain}
+              clientId={auth0Config.clientId}
+              authorizationParams={auth0Param}
+            >
+              {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+              <Head>
+                <title>Home</title>
+                <link rel="icon" href="/favicon.ico" />
+              </Head>
+              {/* ThemeProvider makes the theme available down the React
             tree thanks to React context. */}
 
-            <CssBaseline />
-            <Base>{children}</Base>
-          </Auth0Provider>
-        </ThemeProvider>
+              <CssBaseline />
+              <Base>{children}</Base>
+            </Auth0Provider>
+          </ThemeProvider>
+        </StyledJsxRegistry>
       </body>
     </html>
   );
