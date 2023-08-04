@@ -42,10 +42,9 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 8.6.10
           run_install: |
             - recursive: true
-              args: [--frozen-lockfile, --strict-peer-dependencies]
+              args: [--frozen-lockfile]
 
       - name: Build
         env:
