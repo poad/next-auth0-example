@@ -1,32 +1,32 @@
-'use client';
-import Link from 'next/link';
+"use client";
+import Link from "next/link";
 
 const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
+	{ href: "https://zeit.co/now", label: "ZEIT" },
+	{ href: "https://github.com/zeit/next.js", label: "GitHub" },
 ].map((link) => ({
-  ...link,
-  key: `nav-link-${link.href}-${link.label}`,
+	...link,
+	key: `nav-link-${link.href}-${link.label}`,
 }));
 
 export default function Nav(): JSX.Element {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link href="/">
-            {/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
-            <a>Home</a>
-          </Link>
-        </li>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <a href={href}>{label}</a>
-          </li>
-        ))}
-      </ul>
+	return (
+		<nav>
+			<ul>
+				<li>
+					<Link href="/">
+						{/* rome-ignore lint/a11y/useValidAnchor: <explanation> */}
+						<a>Home</a>
+					</Link>
+				</li>
+				{links.map(({ key, href, label }) => (
+					<li key={key}>
+						<a href={href}>{label}</a>
+					</li>
+				))}
+			</ul>
 
-      <style>{`
+			<style>{`
       :global(body) {
         margin: 0;
         font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir, Helvetica, sans-serif;
@@ -51,6 +51,6 @@ export default function Nav(): JSX.Element {
         font-size: 13px;
       }
     `}</style>
-    </nav>
-  );
+		</nav>
+	);
 }
