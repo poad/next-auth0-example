@@ -42,6 +42,7 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
+          version: latest
           run_install: |
             - recursive: true
               args: [--frozen-lockfile]
