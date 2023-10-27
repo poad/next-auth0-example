@@ -1617,12 +1617,12 @@ packages:
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
     dev: true
 
-  /acorn-import-assertions@1.9.0(acorn@8.10.0):
+  /acorn-import-assertions@1.9.0(acorn@8.11.1):
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
     peerDependencies:
       acorn: ^8
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.1
     dev: true
 
   /acorn-walk@8.2.0:
@@ -1630,8 +1630,8 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /acorn@8.10.0:
-    resolution: {integrity: sha512-F0SAmZ8iUtS//m8DmCTA0jlh6TDKkHQyK6xc6V4KDTyZKA9dnvX9/3sRTVQrWm79glUAZbnmmNcdYwUIHWVybw==}
+  /acorn@8.11.1:
+    resolution: {integrity: sha512-IJTNCJMRHfRfb8un89z1QtS0x890C2QUrUxFMK8zy+RizcId6mfnqOf68Bu9YkDgpLYuvCm6aYbwDatXVZPjMQ==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: true
@@ -2932,7 +2932,7 @@ packages:
     hasBin: true
     dependencies:
       '@jridgewell/source-map': 0.3.5
-      acorn: 8.10.0
+      acorn: 8.11.1
       commander: 2.20.3
       source-map-support: 0.5.21
     dev: true
@@ -3061,7 +3061,7 @@ packages:
     engines: {node: '>= 10.13.0'}
     hasBin: true
     dependencies:
-      acorn: 8.10.0
+      acorn: 8.11.1
       acorn-walk: 8.2.0
       chalk: 4.1.2
       commander: 7.2.0
@@ -3095,8 +3095,8 @@ packages:
       '@webassemblyjs/ast': 1.11.6
       '@webassemblyjs/wasm-edit': 1.11.6
       '@webassemblyjs/wasm-parser': 1.11.6
-      acorn: 8.10.0
-      acorn-import-assertions: 1.9.0(acorn@8.10.0)
+      acorn: 8.11.1
+      acorn-import-assertions: 1.9.0(acorn@8.11.1)
       browserslist: 4.22.1
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.15.0
