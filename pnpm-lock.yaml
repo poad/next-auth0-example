@@ -1386,8 +1386,8 @@ packages:
     resolution: {integrity: sha512-myfUej5naTBWnqOCc/MdVOLVjXUXtIA+NpDrDBKJtLLg2shUjBu3cZmB/85RyitKc55+lUUyl7oRfLOvkr2hsw==}
     dev: true
 
-  /@types/auth0-js@9.21.3:
-    resolution: {integrity: sha512-5IZHQSljfOREU1fngFcwUXjHUlCq/CM4K1zmVytX0EvH3QnX3cYwK6HCxRuxK7seYMm8yeviWUUkWV1kqK2+sg==}
+  /@types/auth0-js@9.21.4:
+    resolution: {integrity: sha512-G2tJ6ce/+WmAeX1SFNoGTMsk9/0KuKuZQQkf7febJGepaIXGEPtbotJRBfXUS86bi06d84mA7R0p3UWiP9c9oA==}
     dev: false
 
   /@types/auth0@3.3.9:
@@ -3010,7 +3010,7 @@ packages:
     peerDependencies:
       react: '>=16'
     dependencies:
-      '@types/auth0-js': 9.21.3
+      '@types/auth0-js': 9.21.4
       auth0-js: 9.23.2
       react: 18.2.0
     transitivePeerDependencies:
