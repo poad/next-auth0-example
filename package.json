@@ -43,7 +43,7 @@
     "@rebass/preset-material": "^4.0.5",
     "@types/auth0": "^3.3.9",
     "@types/node": "^20.8.10",
-    "@types/react": "^18.2.36",
+    "@types/react": "^18.2.37",
     "@types/rebass": "^4.0.13",
     "rebass": "^4.0.7",
     "swc-loader": "^0.2.3",
