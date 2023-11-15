@@ -859,7 +859,7 @@ packages:
       '@babel/runtime': 7.23.2
       '@floating-ui/react-dom': 2.0.4(react-dom@18.2.0)(react@18.2.0)
       '@mui/types': 7.2.8(@types/react@18.2.37)
-      '@mui/utils': 5.14.17(@types/react@18.2.37)(react@18.2.0)
+      '@mui/utils': 5.14.18(@types/react@18.2.37)(react@18.2.0)
       '@popperjs/core': 2.11.8
       '@types/react': 18.2.37
       clsx: 2.0.0
@@ -913,7 +913,7 @@ packages:
       '@mui/core-downloads-tracker': 5.14.17
       '@mui/system': 5.14.17(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(@types/react@18.2.37)(react@18.2.0)
       '@mui/types': 7.2.8(@types/react@18.2.37)
-      '@mui/utils': 5.14.17(@types/react@18.2.37)(react@18.2.0)
+      '@mui/utils': 5.14.18(@types/react@18.2.37)(react@18.2.0)
       '@types/react': 18.2.37
       '@types/react-transition-group': 4.4.9
       clsx: 2.0.0
@@ -936,7 +936,7 @@ packages:
         optional: true
     dependencies:
       '@babel/runtime': 7.23.2
-      '@mui/utils': 5.14.17(@types/react@18.2.37)(react@18.2.0)
+      '@mui/utils': 5.14.18(@types/react@18.2.37)(react@18.2.0)
       '@types/react': 18.2.37
       prop-types: 15.8.1
       react: 18.2.0
@@ -986,7 +986,7 @@ packages:
       '@mui/private-theming': 5.14.17(@types/react@18.2.37)(react@18.2.0)
       '@mui/styled-engine': 5.14.17(@emotion/react@11.11.1)(@emotion/styled@11.11.0)(react@18.2.0)
       '@mui/types': 7.2.8(@types/react@18.2.37)
-      '@mui/utils': 5.14.17(@types/react@18.2.37)(react@18.2.0)
+      '@mui/utils': 5.14.18(@types/react@18.2.37)(react@18.2.0)
       '@types/react': 18.2.37
       clsx: 2.0.0
       csstype: 3.1.2
@@ -1005,8 +1005,8 @@ packages:
       '@types/react': 18.2.37
     dev: false
 
-  /@mui/utils@5.14.17(@types/react@18.2.37)(react@18.2.0):
-    resolution: {integrity: sha512-yxnWgSS4J6DMFPw2Dof85yBkG02VTbEiqsikymMsnZnXDurtVGTIhlNuV24GTmFTuJMzEyTTU9UF+O7zaL8LEQ==}
+  /@mui/utils@5.14.18(@types/react@18.2.37)(react@18.2.0):
+    resolution: {integrity: sha512-HZDRsJtEZ7WMSnrHV9uwScGze4wM/Y+u6pDVo+grUjt5yXzn+wI8QX/JwTHh9YSw/WpnUL80mJJjgCnWj2VrzQ==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@types/react': ^17.0.0 || ^18.0.0
