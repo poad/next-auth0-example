@@ -1448,7 +1448,7 @@ packages:
     resolution: {integrity: sha512-RGAYMi2bhRgEXT3f4B92WTohopH6bIXw05FuGlmJEnv/omEn190+QYEIYxIAuIBdKgboYYdVved2p1AxZVQnaw==}
     dependencies:
       '@types/prop-types': 15.7.10
-      '@types/scheduler': 0.16.6
+      '@types/scheduler': 0.16.7
       csstype: 3.1.2
 
   /@types/rebass@4.0.13:
@@ -1460,8 +1460,8 @@ packages:
       '@types/styled-system__css': 5.0.21
     dev: true
 
-  /@types/scheduler@0.16.6:
-    resolution: {integrity: sha512-Vlktnchmkylvc9SnwwwozTv04L/e1NykF5vgoQ0XTmI8DD+wxfjQuHuvHS3p0r2jz2x2ghPs2h1FVeDirIteWA==}
+  /@types/scheduler@0.16.7:
+    resolution: {integrity: sha512-8g25Nl3AuB1KulTlSUsUhUo/oBgBU6XIXQ+XURpeioEbEJvkO7qI4vDfREv3vJYHHzqXjcAHvoJy4pTtSQNZtA==}
 
   /@types/styled-components@5.1.30:
     resolution: {integrity: sha512-xxJqw0s1myRTgrzHgG5tKHS9hK+KNhjbKMXDWlHRo9eDNVVUqf147QUGYUqwyCDkFyGr2pi1qJKFMEy0ACZb0A==}
