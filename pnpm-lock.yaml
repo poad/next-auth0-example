@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^4.0.5
     version: 4.0.5
   '@types/auth0':
-    specifier: ^3.3.9
-    version: 3.3.9
+    specifier: ^3.3.10
+    version: 3.3.10
   '@types/node':
     specifier: ^20.9.2
     version: 20.9.2
@@ -1390,8 +1390,8 @@ packages:
     resolution: {integrity: sha512-G2tJ6ce/+WmAeX1SFNoGTMsk9/0KuKuZQQkf7febJGepaIXGEPtbotJRBfXUS86bi06d84mA7R0p3UWiP9c9oA==}
     dev: false
 
-  /@types/auth0@3.3.9:
-    resolution: {integrity: sha512-LnMxKmZAKdzG0FO0q2ZXXh6DUH7Y8hfYZQKAosBPvFq/NlbxtnE5EA1FvdPiHjgqJ5ye1Nm2ki8iIrOxnxMCIQ==}
+  /@types/auth0@3.3.10:
+    resolution: {integrity: sha512-9tS0Y2igWxw+Dx5uCHkIUCu6tG0oRkwpE322dOJPwZMLXQMx49n/gDmUz7YJSe1iVjrWW+ffVYmlPShVIEwjkg==}
     dev: true
 
   /@types/eslint-scope@3.7.7:
