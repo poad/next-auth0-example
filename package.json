@@ -42,7 +42,7 @@
     "@next/bundle-analyzer": "^14.0.3",
     "@rebass/preset-material": "^4.0.5",
     "@types/auth0": "^3.3.10",
-    "@types/node": "^20.9.3",
+    "@types/node": "^20.9.4",
     "@types/react": "^18.2.38",
     "@types/rebass": "^4.0.14",
     "rebass": "^4.0.7",
